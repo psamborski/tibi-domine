@@ -18,25 +18,45 @@
     "react-hooks"
   ],
   "env": {
-    "browser" : true
+    "browser": true
   },
   "globals": {
-    "__DEV__"      : false,
-    "__TEST__"     : false,
-    "__PROD__"     : false,
-    "__COVERAGE__" : false
+    "__DEV__": false,
+    "__TEST__": false,
+    "__PROD__": false,
+    "__COVERAGE__": false
   },
   "rules": {
-    "semi": [2, "never"],
-    "no-unused-vars": ["warn", {"args": "none", "argsIgnorePattern": "^_"}],
+    "semi": [
+      2,
+      "never"
+    ],
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "none",
+        "argsIgnorePattern": "^_"
+      }
+    ],
     "func-names": "off",
     "no-process-exit": "off",
     "import/no-extraneous-dependencies": "off",
     "import/no-unresolved": "off",
-    "import/newline-after-import": ["error", { "count": 1 }],
+    "import/newline-after-import": [
+      "error",
+      {
+        "count": 1
+      }
+    ],
     "import/no-cycle": "off",
-    "arrow-parens": ["off", "always"],
-    "brace-style": ["off", "stroustrup"],
+    "arrow-parens": [
+      "off",
+      "always"
+    ],
+    "brace-style": [
+      "off",
+      "stroustrup"
+    ],
     "capitalized-comments": [
       "off",
       "always",
@@ -45,7 +65,10 @@
       }
     ],
     "class-methods-use-this": "off",
-    "comma-dangle": ["error", "always-multiline"],
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
     "consistent-return": "off",
     "eol-last": "warn",
     "guard-for-in": "off",
@@ -69,7 +92,9 @@
     "implicit-arrow-linebreak": "off",
     "import/prefer-default-export": "off",
     "import/no-default-export": "off",
-    "import/order": ["error"],
+    "import/order": [
+      "error"
+    ],
     "max-len": [
       "error",
       {
@@ -84,8 +109,14 @@
         "ignoreRegExpLiterals": true
       }
     ],
-    "max-lines": ["error", 475],
-    "multiline-ternary": ["error", "always-multiline"],
+    "max-lines": [
+      "error",
+      475
+    ],
+    "multiline-ternary": [
+      "error",
+      "always-multiline"
+    ],
     "newline-per-chained-call": [
       "error",
       {
@@ -118,8 +149,14 @@
     ],
     "no-prototype-builtins": "off",
     "no-shadow": "off",
-    "no-return-assign": ["error", "except-parens"],
-    "no-restricted-syntax": ["error", "BinaryExpression[operator='in']"],
+    "no-return-assign": [
+      "error",
+      "except-parens"
+    ],
+    "no-restricted-syntax": [
+      "error",
+      "BinaryExpression[operator='in']"
+    ],
     "no-trailing-spaces": "error",
     "no-underscore-dangle": "off",
     "no-use-before-define": "off",
@@ -161,7 +198,10 @@
       }
     ],
     "key-spacing": 0,
-    "jsx-quotes": [2, "prefer-single"],
+    "jsx-quotes": [
+      2,
+      "prefer-single"
+    ],
     "space-before-function-paren": [
       "error",
       {
@@ -171,6 +211,12 @@
       }
     ],
     "react/button-has-type": "warn",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function"
+      }
+    ],
     "react/destructuring-assignment": "off",
     "react/display-name": [
       "off",
@@ -181,7 +227,9 @@
     "react/forbid-prop-types": [
       "error",
       {
-        "forbid": ["any"]
+        "forbid": [
+          "any"
+        ]
       }
     ],
     "react/no-access-state-in-setstate": "warn",
@@ -231,12 +279,20 @@
     ],
     "react/jsx-boolean-value": "error",
     "react/jsx-closing-tag-location": "error",
-    "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
+    "react/jsx-closing-bracket-location": [
+      "error",
+      "tag-aligned"
+    ],
     "react/jsx-curly-spacing": "error",
     "react/jsx-filename-extension": [
       "warn",
       {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       }
     ],
     "react/jsx-indent": [
@@ -256,14 +312,20 @@
     "react/jsx-uses-react": "warn",
     "react/jsx-uses-vars": "warn",
     "react/jsx-wrap-multilines": "error",
-    "react/jsx-first-prop-new-line": ["error", "multiline"],
+    "react/jsx-first-prop-new-line": [
+      "error",
+      "multiline"
+    ],
     "react/jsx-max-props-per-line": [
       "error",
       {
         "maximum": 1
       }
     ],
-    "react/jsx-indent-props": [2, 2],
+    "react/jsx-indent-props": [
+      2,
+      2
+    ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "off",
     "eslint-comments/no-unlimited-disable": "off",

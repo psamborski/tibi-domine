@@ -1,14 +1,19 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import * as ReactDOMClient from 'react-dom/client'
 import './features/Homepage/index.css'
-import App from './features/Homepage/App'
 import reportWebVitals from './functions/reportWebVitals'
+import { RoutesComponent } from './features/Routes/Routes'
+import { routesList } from './utils/routes'
 
-ReactDOM.render(
+const root = ReactDOMClient.createRoot(document.getElementById('root'))
+
+root.render(
   <React.StrictMode>
-    <App />
+    <RoutesComponent
+      color
+      routes={routesList}
+    />
   </React.StrictMode>,
-  document.getElementById('root'),
 )
 
 // If you want to start measuring performance in your app, pass a function
