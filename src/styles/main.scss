@@ -1,0 +1,13 @@
+div, span, a, section, article, footer {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Assistant', sans-serif;
+  color: white;
+
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

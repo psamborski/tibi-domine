@@ -1,0 +1,39 @@
+@import "../../../styles/variables";
+
+.Church-Logo {
+  width: 220px;
+  height: 220px;
+  border-radius: 220px;
+  background: $skew_gradient;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+
+  @media screen and (max-width: $mobile_width_treshold) {
+    bottom: -45px;
+  }
+
+  &:after {
+    box-sizing: border-box;
+    width: 208px;
+    height: 208px;
+    border-radius: 220px;
+    display: block;
+    content: '\A';
+    background-color: $main_black;
+    position: absolute;
+    z-index: -1;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    width: 80%;
+  }
+}

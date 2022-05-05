@@ -1,16 +1,16 @@
 import React from 'react'
 import * as ReactDOMClient from 'react-dom/client'
-import './features/Homepage/index.css'
 import reportWebVitals from './functions/reportWebVitals'
+
 import { RoutesComponent } from './features/Routes/Routes'
 import { routesList } from './utils/routes'
+import './styles/main.scss'
 
 const root = ReactDOMClient.createRoot(document.getElementById('root'))
 
 root.render(
   <React.StrictMode>
     <RoutesComponent
-      color
       routes={routesList}
     />
   </React.StrictMode>,
