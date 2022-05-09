@@ -3,19 +3,19 @@ import { lazy } from 'react'
 export const ROUTES = {
   HOMEPAGE: '/',
   ABOUT: {
-    ROOT: '/o-nas',
+    ROOT: '/about',
     CHILDREN: {
-      DESCRIPTION: '/opis-choru',
+      DESCRIPTION: '/choir',
       CV: '/cv',
-      RECRUITMENT: '/nabor',
-      STAFF: '/kadra',
+      RECRUITMENT: '/recruitment',
+      STAFF: '/staff',
     },
   },
-  NEWS: '/aktualnosci',
-  ACHIEVEMENTS: '/osiagniecia',
-  GALLERY: '/galeria',
-  REPERTOIRE: '/repertuar',
-  CONTACT: '/kontakt',
+  NEWS: '/news',
+  ACHIEVEMENTS: '/achievements',
+  GALLERY: '/gallery',
+  REPERTOIRE: '/repertoire',
+  CONTACT: '/contact',
 }
 
 // Main components
