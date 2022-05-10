@@ -1,9 +1,10 @@
 import React from 'react'
 import './App.css'
-import Footer from '../../components/organisms/Footer'
+
+import Header from '../../components/organisms/Header'
 
 const App = () => (
-  <Footer />
+  <Header />
 )
 
 export default App

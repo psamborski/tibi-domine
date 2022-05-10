@@ -3,7 +3,12 @@ $main_purple: #bc1551;
 $main_black: #100F10FF;
 
 $skew_gradient: linear-gradient(300deg, rgba(0,68,127,1) 0%, rgba(188,21,81,1) 100%);
+$skew_gradient_bright: linear-gradient(300deg, rgb(4, 90, 162) 0%, rgb(225, 20, 100) 100%);
 $radial_gradient: radial-gradient(circle, rgba(188,21,81,1) 0%, rgba(0,68,127,1) 100%);
 $linear_gradient: linear-gradient(90deg, rgba(188,21,81,1) 0%, rgba(0,68,127,1) 100%);
+$linear_gradient_with_black: linear-gradient(90deg, $main_black 10%, rgba(188,21,81,1) 30%, rgba(0,68,127,1) 70%, $main_black 90%);
+$monochrome_linear_gradient: linear-gradient(90deg, rgba(0,0,0,0) 10%, rgba(255,255,255,1) 50%, rgba(0,0,0,0) 90%);
+$blue_fade_linear_gradient: linear-gradient(90deg, rgba(0,0,0,0) 10%, $main_blue 50%, rgba(0,0,0,0) 90%);
+$purple_fade_linear_gradient: linear-gradient(90deg, rgba(0,0,0,0) 10%, $main_purple 50%, rgba(0,0,0,0) 90%);
 
 $mobile_width_treshold: 780px;

@@ -1,0 +1,30 @@
+@import "../../../styles/variables";
+
+.Header {
+  background-color: $main_black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 1.3em;
+
+  //@media screen and (max-width: $mobile_width_treshold) {
+  //  height: 450px;
+  //}
+
+  hr {
+    width: 90vw;
+    //max-width: 900px;
+    box-sizing: border-box;
+    height: 2px;
+    background: $blue_fade_linear_gradient;
+    opacity: 1;
+    outline: none;
+    border: none;
+    margin: 0;
+  }
+
+
+}

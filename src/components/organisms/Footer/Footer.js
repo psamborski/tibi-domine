@@ -6,9 +6,9 @@ import IconHyperlink from '../../molecules/IconHyperlink'
 import ChurchLogo from '../../atoms/ChurchLogo'
 
 export const Footer = () => (
-  <footer>
+  <footer className='Footer'>
     <section className='Footer-contact-section'>
-      <div className='Footer-contact-section--container'>
+      <div className='Footer-contact-section__container'>
         <IconHyperlink
           href='tel:+48123123123'
           iconClassname='fa-solid fa-phone'

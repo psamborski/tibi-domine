@@ -1,6 +1,6 @@
 @import "../../../styles/variables";
 
-.Menu {
+.Menu, .Menu--sticky {
   padding: .9em 0;
   display: inline-flex;
   flex-direction: row;
@@ -8,5 +8,13 @@
   align-items: center;
   flex-wrap: wrap;
   position: relative;
-  top: -2px
+  top: -2px;
+
+}
+
+.Menu--sticky {
+  background-color: $main_black;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
