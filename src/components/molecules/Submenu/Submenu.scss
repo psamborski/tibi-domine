@@ -1,0 +1,25 @@
+@import "../../../styles/variables";
+
+// shown submenu
+.Menu-Item__container:hover + .Submenu, .Submenu:hover {
+  opacity: 1;
+  top: 100%;
+}
+
+// hidden submenu + default styles
+.Submenu {
+  background-color: rgba(0, 0, 0, .8);
+  width: 100vw;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  transition: all .33s cubic-bezier(0.86 ,0, 0.07, 1);
+  z-index: -1;
+
+  // hidden attributes
+  top: 0;
+  opacity: .2;
+}

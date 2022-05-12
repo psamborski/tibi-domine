@@ -1,9 +1,10 @@
 import React from 'react'
 import './Menu.scss'
 import { ROUTES } from '../../../utils/routes'
-// import { isObject } from '../../../functions/handies'
+import { isObject } from '../../../functions/handies'
 
 import MenuItem from '../../atoms/MenuItem'
+import Submenu from '../Submenu'
 
 export const Menu = ({ ...restProps }) => (
   <nav className='Menu'>
@@ -15,22 +16,38 @@ export const Menu = ({ ...restProps }) => (
             className='Menu-Item__container'
           >
             <MenuItem to={route}>{`MENU_${key}`}</MenuItem>
+            {/* <MenuItem to={route}>{`${key}`}</MenuItem> */}
           </div>
         )
       }
 
-      // if (ROUTES[key]?.ROOT && isObject(ROUTES[key]?.CHILDREN)) {
-      //   return (
-      //     Object.entries(ROUTES[key]?.CHILDREN).map(([childKey, childRoute]) => (
-      //       <div
-      //         key={`MENU_${key}--${childKey}`}
-      //         className='Menu-Item__container'
-      //       >
-      //         <MenuItem to={childRoute}>{`MENU_${key}--${childKey}`}</MenuItem>
-      //       </div>
-      //     ))
-      //   )
-      // }
+      if (ROUTES[key]?.ROOT && isObject(ROUTES[key]?.CHILDREN)) {
+        // overwrite route to proper value in case of menu entry with submenu
+        const route = ROUTES[key]?.ROOT
+
+        return (
+          <>
+            <div
+              key={`MENU_${key}`}
+              className='Menu-Item__container'
+            >
+              <MenuItem
+                chevron
+                to={route}
+              >
+                {`MENU_${key}`}
+              </MenuItem>
+            </div>
+            <Submenu
+              rootMenuItem={{
+              key,
+              route,
+            }}
+              submenuItems={ROUTES[key]?.CHILDREN || {}}
+            />
+          </>
+        )
+      }
 
       return null
     })}
