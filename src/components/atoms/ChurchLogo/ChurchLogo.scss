@@ -4,12 +4,17 @@
   width: 220px;
   height: 220px;
   border-radius: 220px;
-  background: $skew_gradient;
+  background: $blue_skew_gradient;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
+  transition-duration: .1s;
+
+  &:hover {
+    opacity: .85;
+  }
 
   @media screen and (max-width: $mobile_width_treshold) {
     bottom: -45px;

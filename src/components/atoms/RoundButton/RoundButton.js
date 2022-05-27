@@ -12,9 +12,7 @@ export const RoundButton = ({
     target='_blank'
     title={title}
   >
-    <span>
-      {children}
-    </span>
+    {children}
   </a>
 )
 

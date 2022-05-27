@@ -4,7 +4,7 @@
   & .Menu-Item__chevron {
     font-size: .6em;
     margin-left: .5em;
-    transition: all .33s cubic-bezier(0.86 ,0, 0.07, 1);
+    transition: $default_transition;
   }
 
   &:hover .Menu-Item__chevron {
@@ -20,18 +20,34 @@
     justify-content: center;
     transition: all .1s ease-in-out;
     text-transform: uppercase;
-    //font-size: 1.3em;
-    opacity: .82;
     padding: .7em;
     position: relative;
   }
+
   .Menu-Item {
-    &:hover {
-      opacity: 1;
+    // on hover behaviour
+    &:before {
+      content: '\A';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      width: 0;
+      background: rgba(255, 255, 255, 0.44);
+      transition: all .1s cubic-bezier(0.86 ,0, 0.07, 1);
+
     }
+    &:hover {
+      text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.3);
+    }
+    &:hover::before {
+      width: 98%;
+    }
+    // on hover behaviour end
 
     &--active {
-      opacity: 1;
+      //opacity: 1;
       font-weight: 600;
 
       &:after {
@@ -43,7 +59,7 @@
         width: 6px;
         border-radius: 6px;
         //background: $skew_gradient_bright;
-        background: $main_purple;
+        background: $purple_skew_gradient;
         bottom: .5em;
         opacity: .8;
       }

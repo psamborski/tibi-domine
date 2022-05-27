@@ -7,11 +7,10 @@
   align-items: center;
   flex-wrap: wrap;
   position: relative;
-
+  //background-color: $main_black;
 }
 
 .Menu--sticky {
-  background-color: $main_black;
   position: fixed;
   top: 0;
   width: 100%;

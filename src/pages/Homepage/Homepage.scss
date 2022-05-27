@@ -1,0 +1,13 @@
+@import "../../styles/variables";
+
+.Logo {
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.8em 0;
+
+  svg {
+    width: 100%;
+  }
+}

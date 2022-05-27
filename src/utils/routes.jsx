@@ -19,7 +19,7 @@ export const ROUTES = {
 }
 
 // Main components
-const Homepage = lazy(() => import('../features/Homepage/App'))
+const Homepage = lazy(() => import('../pages/Homepage'))
 
 // Main routes
 const mainRoutes = {

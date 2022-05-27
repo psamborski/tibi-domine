@@ -26,11 +26,8 @@ export const Menu = ({ ...restProps }) => (
         const route = ROUTES[key]?.ROOT
 
         return (
-          <>
-            <div
-              key={`MENU_${key}`}
-              className='Menu-Item__container'
-            >
+          <React.Fragment key={`MENU_${key}`}>
+            <div className='Menu-Item__container'>
               <MenuItem
                 chevron
                 to={route}
@@ -45,7 +42,7 @@ export const Menu = ({ ...restProps }) => (
             }}
               submenuItems={ROUTES[key]?.CHILDREN || {}}
             />
-          </>
+          </React.Fragment>
         )
       }
 
