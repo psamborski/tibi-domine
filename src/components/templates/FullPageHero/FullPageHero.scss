@@ -5,7 +5,7 @@
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  padding-top: 2em;
+  padding-top: 1.5em;
 
   .Hero-Section {
     min-height: 94vh;
@@ -13,15 +13,31 @@
     background-size: cover;
     background-position: 50% 50%;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
 
     &:after {
       width: 100%;
       height: 100%;
       content: '\A';
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(0, 0, 0, 0.7);
       position: absolute;
       top: 0;
       left: 0;
+    }
+
+    .Hero-Section__text {
+      z-index: 1;
+      max-height: 80%;
+      overflow: auto;
+      width: 100%;
+      max-width: $mobile_width_treshold;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
     }
   }
 }

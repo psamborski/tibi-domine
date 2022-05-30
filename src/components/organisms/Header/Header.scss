@@ -15,12 +15,12 @@
   &:before {
     background: linear-gradient(
       180deg,
-        rgba(0,0,0,1) 2em,
-        rgba(0,0,0,0.9) 30%,
-        rgba(0,0,0,0.55) 78%,
-        rgba(0,0,0,0) 100%
+        rgba(0, 0, 0, 1) 1.5em,
+        rgba(0, 0, 0, 0.65) 50%,
+        //rgba(0, 0, 0, 0.6) 76%,
+        rgba(0, 0, 0, 0) 100%
     );
-    padding-bottom: 7em;
+    padding-bottom: 6.4em;
     content: '\A';
     position: absolute;
     width: 100%;

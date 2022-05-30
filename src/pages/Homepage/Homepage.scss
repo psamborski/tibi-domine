@@ -1,13 +1,21 @@
 @import "../../styles/variables";
 
-.Logo {
-  width: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.8em 0;
+h1 {
+  margin-bottom: .33em;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 
-  svg {
-    width: 100%;
+  span {
+    font-weight: 200;
+    font-size: .6em;
+    line-height: .6em;
   }
+}
+
+p {
+  margin-bottom: 1.7em;
+  padding: 0 .2em;
+}
+
+.Button {
+  position: relative;
 }

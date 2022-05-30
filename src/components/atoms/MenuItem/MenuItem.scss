@@ -8,7 +8,7 @@
   }
 
   &:hover .Menu-Item__chevron {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
   }
 
   .Menu-Item, .Menu-Item--active {
