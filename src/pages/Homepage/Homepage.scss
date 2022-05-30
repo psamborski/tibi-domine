@@ -1,21 +1,6 @@
 @import "../../styles/variables";
 
-h1 {
-  margin-bottom: .33em;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-
-  span {
-    font-weight: 200;
-    font-size: .6em;
-    line-height: .6em;
-  }
-}
-
 p {
   margin-bottom: 1.7em;
   padding: 0 .2em;
-}
-
-.Button {
-  position: relative;
 }

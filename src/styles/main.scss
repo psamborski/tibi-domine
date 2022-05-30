@@ -20,6 +20,46 @@ h1 {
 }
 
 h2 {
-  font-size: 3.2em;
+  font-size: 3.4em;
+  line-height: 1em;
   margin: 0;
+  text-transform: uppercase;
+}
+
+// duplicate from Hyperlink in case of adding links in text in CMS
+a {
+  color: white;
+  font-weight: 500;
+  transition: all .1s ease-in-out;
+  text-decoration: none;
+  position: relative;
+
+  // on hover behaviour
+  &:before {
+    content: '\A';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 0;
+    background: rgba(255, 255, 255, 0.6);
+    transition: all .1s cubic-bezier(0.86 ,0, 0.07, 1);
+
+  }
+  &:hover {
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.3);
+  }
+  &:hover::before {
+    width: 105%;
+  }
+  // on hover behaviour end
+
+  &:visited {
+    opacity: .78;
+  }
+
+  &:disabled {
+    opacity: .6;
+  }
 }

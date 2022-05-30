@@ -4,6 +4,7 @@ import './Homepage.scss'
 import FullPageHero from '../../components/templates/FullPageHero'
 import BgImage from '../../assets/images/bg.jpg'
 import Button from '../../components/atoms/Button'
+import PageTitle from '../../components/atoms/PageTitle'
 
 export const Homepage = ({ ...restProps }) => (
   <FullPageHero
@@ -26,11 +27,11 @@ export const Homepage = ({ ...restProps }) => (
       </p>
     )}
     title={(
-      <h1>
-        <span>Chór kameralny</span>
-        <br />
-        Tibi Domine
-      </h1>
+      <PageTitle
+        level={1}
+        subtitle='Chór kameralny'
+        title='Tibi Domine'
+      />
     )}
   />
 )

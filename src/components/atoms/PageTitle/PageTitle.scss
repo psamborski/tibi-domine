@@ -1,0 +1,13 @@
+@import "../../../styles/variables";
+
+.Page-Title { //.big
+  margin-bottom: .33em;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+
+  .Page-Title__subtitle {
+    font-weight: 200;
+    font-size: .6em;
+    line-height: .6em;
+  }
+}

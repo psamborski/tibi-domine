@@ -20,6 +20,8 @@ export const ROUTES = {
 
 // Main components
 const Homepage = lazy(() => import('../pages/Homepage'))
+const News = lazy(() => import('../pages/News'))
+const PH = lazy(() => import('../pages/AboutDescription'))
 
 // Main routes
 const mainRoutes = {
@@ -31,32 +33,34 @@ const mainRoutes = {
     {
       childPath: ROUTES.NEWS,
       name: 'News page',
-      component: Homepage,
+      component: News,
     },
     {
       childPath: ROUTES.ACHIEVEMENTS,
       name: 'Achievements page',
-      component: Homepage,
+      component: PH,
     },
     {
       childPath: ROUTES.GALLERY,
       name: 'Gallery page',
-      component: Homepage,
+      component: PH,
     },
     {
       childPath: ROUTES.REPERTOIRE,
       name: 'Repertoire page',
-      component: Homepage,
+      component: PH,
     },
     {
       childPath: ROUTES.CONTACT,
       name: 'Contact page',
-      component: Homepage,
+      component: PH,
     },
   ],
 }
 
 // About routes
+const AboutDescription = lazy(() => import('../pages/AboutDescription'))
+
 const aboutRoutes = {
   id: 'AboutRoot',
   rootPath: ROUTES.ABOUT.ROOT,
@@ -65,22 +69,22 @@ const aboutRoutes = {
     {
       childPath: ROUTES.ABOUT.CHILDREN.DESCRIPTION,
       name: 'About staff page',
-      component: Homepage,
+      component: AboutDescription,
     },
     {
       childPath: ROUTES.ABOUT.CHILDREN.STAFF,
       name: 'About description page',
-      component: Homepage,
+      component: AboutDescription,
     },
     {
       childPath: ROUTES.ABOUT.CHILDREN.RECRUITMENT,
       name: 'About recruitment page',
-      component: Homepage,
+      component: AboutDescription,
     },
     {
       childPath: ROUTES.ABOUT.CHILDREN.CV,
       name: 'About cv page',
-      component: Homepage,
+      component: AboutDescription,
     },
   ],
 }
