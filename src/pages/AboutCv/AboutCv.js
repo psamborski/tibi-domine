@@ -1,10 +1,10 @@
 import React from 'react'
-import './AboutDescription.scss'
+import './AboutCv.scss'
 
 import BgImage from '../../assets/images/bg.jpg'
 import ArticlePage from '../../components/templates/ArticlePage'
 
-export const AboutDescription = ({ ...restProps }) => (
+export const AboutCv = ({ ...restProps }) => (
   <ArticlePage
     imageSrc={BgImage}
     subtitle='o nas'
@@ -46,6 +46,6 @@ export const AboutDescription = ({ ...restProps }) => (
         </p>
       </>
     )}
-    title='CHÓR'
+    title='CV chóru'
   />
 )

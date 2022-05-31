@@ -11,13 +11,12 @@ export const Menu = ({ ...restProps }) => (
     {Object.entries(ROUTES).map(([key, route]) => {
       if (typeof route === 'string') {
         return (
-          <div
+          <MenuItem
             key={`MENU_${key}`}
-            className='Menu-Item__container'
+            to={route}
           >
-            <MenuItem to={route}>{`MENU_${key}`}</MenuItem>
-            {/* <MenuItem to={route}>{`${key}`}</MenuItem> */}
-          </div>
+            {`${key}`}
+          </MenuItem>
         )
       }
 
@@ -27,14 +26,13 @@ export const Menu = ({ ...restProps }) => (
 
         return (
           <React.Fragment key={`MENU_${key}`}>
-            <div className='Menu-Item__container'>
-              <MenuItem
-                chevron
-                to={route}
-              >
-                {`MENU_${key}`}
-              </MenuItem>
-            </div>
+            <MenuItem
+              chevron
+              to={route}
+              toggable
+            >
+              {`${key}`}
+            </MenuItem>
             <Submenu
               rootMenuItem={{
               key,

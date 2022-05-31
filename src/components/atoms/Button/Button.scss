@@ -32,6 +32,10 @@
     transition: all .1s ease-in-out;
   }
 
+  &:before {
+    display: none;
+  }
+
   &:hover {
     &::after {
       opacity: 1;

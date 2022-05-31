@@ -29,6 +29,10 @@
     opacity: 0;
   }
 
+  &:before {
+    display: none;
+  }
+
   &:hover {
     &::after {
       opacity: 1;

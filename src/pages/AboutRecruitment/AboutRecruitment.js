@@ -1,10 +1,10 @@
 import React from 'react'
-import './AboutDescription.scss'
+import './AboutRecruitment.scss'
 
 import BgImage from '../../assets/images/bg.jpg'
 import ArticlePage from '../../components/templates/ArticlePage'
 
-export const AboutDescription = ({ ...restProps }) => (
+export const AboutRecruitment = ({ ...restProps }) => (
   <ArticlePage
     imageSrc={BgImage}
     subtitle='o nas'
@@ -46,6 +46,6 @@ export const AboutDescription = ({ ...restProps }) => (
         </p>
       </>
     )}
-    title='CHÓR'
+    title='Rekrutacja'
   />
 )

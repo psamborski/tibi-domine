@@ -1,17 +1,7 @@
 @import "../../../styles/variables";
 
-.Menu-Item__container {
-  & .Menu-Item__chevron {
-    font-size: .6em;
-    margin-left: .5em;
-    transition: $default_transition;
-  }
-
-  &:hover .Menu-Item__chevron {
-    transform: rotate(-180deg);
-  }
-
-  .Menu-Item, .Menu-Item--active {
+.Menu-Item {
+  &, &--active {
     //background: $main_black;
     color: white;
     text-decoration: none;
@@ -22,52 +12,81 @@
     text-transform: uppercase;
     padding: .7em;
     position: relative;
+    font-weight: 400;
+
+    .Menu-Item__chevron {
+      font-size: .6em;
+      margin-left: .5em;
+      transition: $default_transition;
+    }
+
+    @media screen and (min-width: $mobile_width_treshold + 1) {
+      &:hover .Menu-Item__chevron {
+        transform: rotate(-180deg);
+      }
+    }
   }
 
-  .Menu-Item {
-    // on hover behaviour
-    &:before {
+  &--active {
+    //opacity: 1;
+    font-weight: 600;
+
+    &:after {
       content: '\A';
       position: absolute;
       left: 50%;
-      top: 50%;
       transform: translateX(-50%);
-      height: 1px;
-      width: 0;
-      background: rgba(255, 255, 255, 0.44);
-      transition: all .1s cubic-bezier(0.86 ,0, 0.07, 1);
-
+      height: 6px;
+      width: 6px;
+      border-radius: 6px;
+      //background: $skew_gradient_bright;
+      background: $purple_skew_gradient;
+      bottom: .5em;
+      opacity: .8;
     }
-    &:hover {
-      text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.3);
-    }
-    &:hover::before {
-      width: 98%;
-    }
-    // on hover behaviour end
+  }
 
-    &--active {
-      //opacity: 1;
-      font-weight: 600;
+  & > span {
+    display: block;
+    max-height: inherit;
+  }
 
-      &:after {
+  // on hover behaviour
+    &:before, &--active:before {
+      @media screen and (min-width: $mobile_width_treshold + 1) {
         content: '\A';
         position: absolute;
         left: 50%;
+        top: 50%;
         transform: translateX(-50%);
-        height: 6px;
-        width: 6px;
-        border-radius: 6px;
-        //background: $skew_gradient_bright;
-        background: $purple_skew_gradient;
-        bottom: .5em;
-        opacity: .8;
+        height: 1px;
+        width: 0;
+        background: rgba(255, 255, 255, 0.44);
+        transition: all .1s cubic-bezier(0.86, 0, 0.07, 1);
+      }
+      @media screen and (max-width: $mobile_width_treshold) {
+        display: none;
       }
     }
+    @media screen and (min-width: $mobile_width_treshold + 1) {
+      &:hover, &--active:hover {
+        text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.3);
+      }
+      &:hover::before, &--active:hover::before {
+        width: 98%;
+      }
+    }
+  // on hover behaviour end
 
-    & > span {
-      display: block;
-      max-height: inherit;
+  // toggable item
+  &--expanded {
+    @media screen and (max-width: $mobile_width_treshold) {
+      &:before {
+        display: none;
+      }
+      .Menu-Item__chevron {
+        transform: rotate(-180deg);
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-div, span, a, section, article, header, footer {
+div, span, a, section, article, header, footer, nav {
   box-sizing: border-box;
 }
 
@@ -39,7 +39,7 @@ a {
     content: '\A';
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 52%;
     transform: translateX(-50%);
     height: 1px;
     width: 0;

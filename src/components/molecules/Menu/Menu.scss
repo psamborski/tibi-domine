@@ -1,6 +1,6 @@
 @import "../../../styles/variables";
 
-.Menu, .Menu--sticky {
+.Menu {
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
@@ -8,11 +8,32 @@
   flex-wrap: wrap;
   position: relative;
   width: 100%;
+  transition: $default_transition;
   //background-color: $main_black;
-}
 
-.Menu--sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+  @media screen and (max-width: $mobile_width_treshold) {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, .9);
+    padding: 6em 1em 2em;
+    flex-wrap: nowrap;
+
+    .Hamburger-Button--active + & {
+      left: 0;
+    }
+
+    //& > :first-child {
+    //  margin-top: auto;
+    //}
+    //
+    //& > :last-child {
+    //  margin-bottom: auto;
+    //}
+  }
 }

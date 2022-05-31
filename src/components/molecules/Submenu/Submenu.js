@@ -8,14 +8,12 @@ export const Submenu = ({
 }) => (
   <div className='Submenu'>
     {Object.entries(submenuItems).map(([childKey, childRoute]) => (
-      <div
+      <MenuItem
         key={`MENU_${rootMenuItem?.key}--${childKey}`}
-        className='Menu-Item__container'
+        to={(rootMenuItem?.route || '') + childRoute}
       >
-        <MenuItem to={(rootMenuItem?.route || '') + childRoute}>
-          {`MENU_${rootMenuItem?.key}--${childKey}`}
-        </MenuItem>
-      </div>
+        {`MENU_${rootMenuItem?.key}--${childKey}`}
+      </MenuItem>
     ))}
   </div>
 

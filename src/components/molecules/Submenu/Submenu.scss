@@ -1,20 +1,25 @@
 @import "../../../styles/variables";
 
 // shown submenu
-.Menu-Item__container:hover + .Submenu, .Submenu:hover {
-  top: 100%;
-  opacity: 1;
-  // uncover submenu
-  //&:after {
-  //  background-color: transparent;
-  //  transition: all .075s cubic-bezier(1, 0, 0, 1) .125s;
-  //
-  //}
+.Menu-Item:hover + .Submenu,
+.Menu-Item--active:hover + .Submenu,
+.Submenu:hover {
+  @media screen and (min-width: $mobile_width_treshold + 1) {
+    top: 85%;
+    opacity: 1;
+  }
+}
+
+.Menu-Item--expanded + .Submenu {
+  @media screen and (max-width: $mobile_width_treshold) {
+    opacity: 1;
+    max-height: 100vh;
+    visibility: initial;
+  }
 }
 
 // hidden submenu + default styles
 .Submenu {
-  //background-color: rgba(0, 0, 0, .8);
   width: 100%;
   display: inline-flex;
   flex-direction: row;
@@ -24,21 +29,22 @@
   position: absolute;
   transition: $default_transition;
   z-index: -1;
-  padding-bottom: .3em;
 
   // hidden attributes
   top: 0;
   opacity: 0;
 
-  // cover submenu to prevent font leaks
-  //&:after {
-  //  content: '\A';
-  //  background-color: $main_black;
-  //  position: absolute;
-  //  width: 100%;
-  //  height: 100%;
-  //  top: 0;
-  //  left: 0;
-  //  transition: all .075s cubic-bezier(1, 0, 0, 1) .1s;
-  //}
+  @media screen and (max-width: $mobile_width_treshold) {
+    position: initial;
+    flex-direction: column;
+    font-size: .9em;
+    flex-wrap: nowrap;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    & > :last-child {
+      margin-bottom: .7em;
+    }
+  }
 }
