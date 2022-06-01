@@ -6,9 +6,7 @@ import ArticlePage from '../../components/templates/ArticlePage'
 
 export const AboutDescription = ({ ...restProps }) => (
   <ArticlePage
-    imageSrc={BgImage}
-    subtitle='o nas'
-    text={(
+    content={(
       <>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -46,6 +44,8 @@ export const AboutDescription = ({ ...restProps }) => (
         </p>
       </>
     )}
+    imageSrc={BgImage}
+    subtitle='o nas'
     title='CHÓR'
   />
 )

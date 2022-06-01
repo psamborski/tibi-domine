@@ -6,7 +6,7 @@ import Footer from '../../organisms/Footer'
 import ArticleImageTitle from '../../molecules/ArticleImageTitle'
 
 export const ArticlePage = ({
- title, subtitle, imageSrc, text, ...restProps
+ title, subtitle, imageSrc, content, ...restProps
 }) => (
   <div className='Article-Page'>
     <Header />
@@ -19,7 +19,7 @@ export const ArticlePage = ({
         title={title}
       />
       <article className='Article-Section__content'>
-        {text}
+        {content}
       </article>
     </section>
     <Footer />
@@ -30,5 +30,5 @@ ArticlePage.defaultProps = {
   title: '',
   subtitle: '',
   imageSrc: '',
-  text: '',
+  content: '',
 }

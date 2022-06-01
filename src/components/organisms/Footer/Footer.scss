@@ -9,7 +9,7 @@
 
   @media screen and (max-width: $mobile_width_treshold) {
     flex-direction: column;
-    height: 450px;
+    height: 400px;
   }
 
   section {
@@ -23,6 +23,7 @@
   flex: 1;
   @media screen and (max-width: $mobile_width_treshold) {
     order: 1;
+    padding: 1.2em 0;
   }
 
   .Footer-contact-section__container {
@@ -39,6 +40,10 @@
     width: initial;
     flex: 1;
     order: 3;
+
+    .Church-Logo {
+      bottom: -15px;
+    }
   }
 }
 
@@ -46,6 +51,7 @@
   flex: 1;
   @media screen and (max-width: $mobile_width_treshold) {
     order: 2;
+    padding: 1.2em 0;
   }
 
   .Round-Button {

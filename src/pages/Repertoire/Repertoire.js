@@ -6,8 +6,7 @@ import ArticlePage from '../../components/templates/ArticlePage'
 
 export const Repertoire = ({ ...restProps }) => (
   <ArticlePage
-    imageSrc={BgImage}
-    text={(
+    content={(
       <>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -45,6 +44,7 @@ export const Repertoire = ({ ...restProps }) => (
         </p>
       </>
     )}
+    imageSrc={BgImage}
     title='Repertuar'
   />
 )

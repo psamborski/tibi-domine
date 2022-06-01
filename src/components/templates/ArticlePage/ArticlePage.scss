@@ -17,7 +17,7 @@
 
     .Article-Section__content {
       width: 100%;
-      max-width: $mobile_width_treshold;
+      max-width: calc($mobile_width_treshold + 4em);
       padding: 3em 2em 5em;
       flex: 1;
       display: flex;

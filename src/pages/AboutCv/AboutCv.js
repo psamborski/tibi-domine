@@ -6,9 +6,7 @@ import ArticlePage from '../../components/templates/ArticlePage'
 
 export const AboutCv = ({ ...restProps }) => (
   <ArticlePage
-    imageSrc={BgImage}
-    subtitle='o nas'
-    text={(
+    content={(
       <>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -46,6 +44,8 @@ export const AboutCv = ({ ...restProps }) => (
         </p>
       </>
     )}
+    imageSrc={BgImage}
+    subtitle='o nas'
     title='CV chóru'
   />
 )

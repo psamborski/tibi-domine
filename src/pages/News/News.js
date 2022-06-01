@@ -7,10 +7,10 @@ import FacebookFeed from '../../features/FacebookFeed'
 
 export const News = ({ ...restProps }) => (
   <ArticlePage
-    imageSrc={BgImage}
-    text={(
+    content={(
       <FacebookFeed />
     )}
+    imageSrc={BgImage}
     title='Aktualności'
   />
 )

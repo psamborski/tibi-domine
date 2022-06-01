@@ -16,10 +16,6 @@
     opacity: .85;
   }
 
-  @media screen and (max-width: $mobile_width_treshold) {
-    bottom: -45px;
-  }
-
   &:after {
     box-sizing: border-box;
     width: 208px;
