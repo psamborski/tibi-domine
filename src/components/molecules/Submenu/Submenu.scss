@@ -4,14 +4,14 @@
 .Menu-Item:hover + .Submenu,
 .Menu-Item--active:hover + .Submenu,
 .Submenu:hover {
-  @media screen and (min-width: $mobile_width_treshold + 1) {
+  @media screen and (min-width: $mobile_width_threshold + 1) {
     top: 85%;
     opacity: 1;
   }
 }
 
 .Menu-Item--expanded + .Submenu {
-  @media screen and (max-width: $mobile_width_treshold) {
+  @media screen and (max-width: $mobile_width_threshold) {
     opacity: 1;
     max-height: 100vh;
     visibility: initial;
@@ -34,7 +34,7 @@
   top: 0;
   opacity: 0;
 
-  @media screen and (max-width: $mobile_width_treshold) {
+  @media screen and (max-width: $mobile_width_threshold) {
     position: initial;
     flex-direction: column;
     font-size: .9em;

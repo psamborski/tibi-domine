@@ -12,9 +12,10 @@ export const Gallery = ({ ...restProps }) => {
 
   useEffect(() => {
     axios
-      .get('https://picsum.photos/v2/list')
+      .get('https://picsum.photos/v2/list?limit=12')
       .then(resp => setImages(resp?.data || []))
-  })
+  }, [])
+
   return (
     <ArticlePage
       content={(
@@ -23,4 +24,5 @@ export const Gallery = ({ ...restProps }) => {
       imageSrc={BgImage}
       title='Galeria'
     />
-) }
+  )
+}

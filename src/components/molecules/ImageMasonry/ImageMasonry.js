@@ -2,15 +2,19 @@ import React from 'react'
 import './ImageMasonry.scss'
 
 import Masonry from 'react-masonry-css'
+import { trackWindowScroll } from 'react-lazy-load-image-component'
 
-export const ImageMasonry = ({
-  children, images, ...restProps
+import GalleryImage from '../../atoms/GalleryImage'
+
+const ImageMasonryComponent = ({
+  images, scrollPosition, ...restProps
 }) => {
   const breakpointColumnsObj = {
     default: 3,
     900: 2,
     500: 1,
   }
+
   return (
     <Masonry
       breakpointCols={breakpointColumnsObj}
@@ -18,12 +22,12 @@ export const ImageMasonry = ({
       columnClassName='Image-Masonry__column'
     >
       {
-        images.map((x, i) => (
-          <img // todo img as lazy atom
-            key={`xd-${x.id}`}
-            alt='x example'
-            loading='lazy'
-            src={x.download_url} // todo lib to camel case
+        images.map((image, i) => (
+          <GalleryImage
+            key={`Gallery-Image-${image.id}`}
+            alt={`Tibi Domine gallery - photo ${i}`}
+            scrollPostion={null}
+            src={image.download_url} // todo lib to camel case
           />
         ))
       }
@@ -31,6 +35,9 @@ export const ImageMasonry = ({
   )
 }
 
-ImageMasonry.defaultProps = {
+ImageMasonryComponent.defaultProps = {
   images: [],
+  scrollPosition: null,
 }
+
+export const ImageMasonry = trackWindowScroll(ImageMasonryComponent)

@@ -11,7 +11,7 @@
   transition: $default_transition;
   //background-color: $main_black;
 
-  @media screen and (max-width: $mobile_width_treshold) {
+  @media screen and (max-width: $mobile_width_threshold) {
     position: fixed;
     top: 0;
     left: -100%;

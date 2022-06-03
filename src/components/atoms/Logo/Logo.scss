@@ -23,7 +23,7 @@
     display: none;
   }
 
-  @media screen and (max-width: $mobile_width_treshold) {
+  @media screen and (max-width: $mobile_width_threshold) {
     width: auto;
     height: 100%;
     padding: 0 .6em;

@@ -43,7 +43,7 @@
     margin: 0;
   }
 
-  @media screen and (max-width: $mobile_width_treshold) {
+  @media screen and (max-width: $mobile_width_threshold) {
     height: $mobile_navbar_height;
     padding: .6em;
   }
@@ -54,7 +54,7 @@
     top: 12px;
     z-index: 999;
 
-    @media screen and (min-width: $mobile_width_treshold + 1) {
+    @media screen and (min-width: $mobile_width_threshold + 1) {
       display: none;
     }
   }

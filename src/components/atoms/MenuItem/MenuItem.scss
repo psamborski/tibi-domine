@@ -20,7 +20,7 @@
       transition: $default_transition;
     }
 
-    @media screen and (min-width: $mobile_width_treshold + 1) {
+    @media screen and (min-width: $mobile_width_threshold + 1) {
       &:hover .Menu-Item__chevron {
         transform: rotate(-180deg);
       }
@@ -53,7 +53,7 @@
 
   // on hover behaviour
     &:before, &--active:before {
-      @media screen and (min-width: $mobile_width_treshold + 1) {
+      @media screen and (min-width: $mobile_width_threshold + 1) {
         content: '\A';
         position: absolute;
         left: 50%;
@@ -64,11 +64,11 @@
         background: rgba(255, 255, 255, 0.44);
         transition: all .1s cubic-bezier(0.86, 0, 0.07, 1);
       }
-      @media screen and (max-width: $mobile_width_treshold) {
+      @media screen and (max-width: $mobile_width_threshold) {
         display: none;
       }
     }
-    @media screen and (min-width: $mobile_width_treshold + 1) {
+    @media screen and (min-width: $mobile_width_threshold + 1) {
       &:hover, &--active:hover {
         text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.3);
       }
@@ -80,7 +80,7 @@
 
   // toggable item
   &--expanded {
-    @media screen and (max-width: $mobile_width_treshold) {
+    @media screen and (max-width: $mobile_width_threshold) {
       &:before {
         display: none;
       }

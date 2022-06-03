@@ -7,7 +7,7 @@
   height: 150px;
   overflow: hidden;
 
-  @media screen and (max-width: $mobile_width_treshold) {
+  @media screen and (max-width: $mobile_width_threshold) {
     flex-direction: column;
     height: 400px;
   }
@@ -21,7 +21,7 @@
 
 .Footer-contact-section {
   flex: 1;
-  @media screen and (max-width: $mobile_width_treshold) {
+  @media screen and (max-width: $mobile_width_threshold) {
     order: 1;
     padding: 1.2em 0;
   }
@@ -36,7 +36,7 @@
 
 .Footer-logo-section {
   width: 220px;
-  @media screen and (max-width: $mobile_width_treshold) {
+  @media screen and (max-width: $mobile_width_threshold) {
     width: initial;
     flex: 1;
     order: 3;
@@ -49,7 +49,7 @@
 
 .Footer-social-section {
   flex: 1;
-  @media screen and (max-width: $mobile_width_treshold) {
+  @media screen and (max-width: $mobile_width_threshold) {
     order: 2;
     padding: 1.2em 0;
   }

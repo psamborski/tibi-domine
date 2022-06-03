@@ -15,8 +15,8 @@ $gutter_width: 15px;
 }
 
 /* Style your items */
-.Image-Masonry__column > img { /* change div to reference your elements you put in <Masonry> */
-  background: grey;
+.Image-Masonry__column > * { /* change div to reference your elements you put in <Masonry> */
+  display: block;
   margin-bottom: $gutter_width;
   width: 100%;
 }
