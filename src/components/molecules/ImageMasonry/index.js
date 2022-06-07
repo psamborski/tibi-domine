@@ -1,3 +1,3 @@
-import { ImageMasonry } from './ImageMasonry'
+import ImageMasonry from './ImageMasonry'
 
 export default ImageMasonry

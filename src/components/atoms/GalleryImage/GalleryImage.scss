@@ -10,6 +10,12 @@
   position: relative;
   width: 100%;
   min-height: 215px;
+  cursor: pointer;
+  transition: $default_transition;
+
+  &:hover {
+    opacity: .78;
+  }
 
   &:after {
     opacity: 1;
