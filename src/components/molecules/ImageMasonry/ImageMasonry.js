@@ -7,7 +7,7 @@ import { trackWindowScroll } from 'react-lazy-load-image-component'
 import GalleryImage from '../../atoms/GalleryImage'
 
 const ImageMasonryComponent = ({
-  images, scrollPosition, ...restProps
+  images, scrollPosition, catchImageClick, ...restProps
 }) => {
   const breakpointColumnsObj = {
     default: 3,
@@ -26,6 +26,9 @@ const ImageMasonryComponent = ({
           <GalleryImage
             key={`Gallery-Image-${image.id}`}
             alt={`Tibi Domine gallery - photo ${i}`}
+            handleClick={catchImageClick}
+            id={`Gallery-Image-${image.id}`}
+            index={i}
             scrollPostion={null}
             src={image.download_url} // todo lib to camel case
           />
@@ -38,6 +41,7 @@ const ImageMasonryComponent = ({
 ImageMasonryComponent.defaultProps = {
   images: [],
   scrollPosition: null,
+  catchImageClick: null,
 }
 
-export const ImageMasonry = trackWindowScroll(ImageMasonryComponent)
+export default trackWindowScroll(ImageMasonryComponent)
