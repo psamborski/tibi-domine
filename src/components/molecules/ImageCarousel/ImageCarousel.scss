@@ -17,9 +17,10 @@
     z-index: 1;
     cursor: pointer;
     transition: $default_transition;
+    background-color: $main_black;
 
     &:hover {
-      opacity: .7;
+      opacity: .9;
     }
 
     span {
@@ -29,6 +30,18 @@
       align-items: center;
       justify-content: center;
       font-size: 1.2em;
+    }
+  }
+
+  .Image-Carousel__nav-button {
+    font-size: 2em;
+    cursor: pointer;
+    padding: 1em;
+    background-color: $main_black;
+    transition: $default_transition;
+
+    &:hover {
+      opacity: .9;
     }
   }
 

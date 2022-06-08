@@ -60,6 +60,36 @@ export const ImageCarousel = ({
         // }}
         dragThreshold={0.15}
         enableKeyboardControls
+        renderCenterLeftControls={({ previousSlide }) => (
+          <div
+            className='Image-Carousel__nav-button'
+            onClick={previousSlide}
+            onKeyDown={(ev) => {
+              if (ev.key === 'Enter') {
+                previousSlide()
+              }
+            }}
+            role='button'
+            tabIndex={0}
+          >
+            <span className='fa-solid fa-chevron-left' />
+          </div>
+        )}
+        renderCenterRightControls={({ nextSlide }) => (
+          <div
+            className='Image-Carousel__nav-button'
+            onClick={nextSlide}
+            onKeyDown={(ev) => {
+              if (ev.key === 'Enter') {
+                nextSlide()
+              }
+            }}
+            role='button'
+            tabIndex={0}
+          >
+            <span className='fa-solid fa-chevron-right' />
+          </div>
+        )}
         slideIndex={openedImageIndex || carouselImageIndex || 0}
         style={{
           height: '100%',
