@@ -35,9 +35,6 @@ export const Footer = () => (
       <RoundButton>
         <span className='fa-brands fa-facebook-f' />
       </RoundButton>
-      <RoundButton>
-        <span className='fa-brands fa-instagram' />
-      </RoundButton>
     </section>
   </footer>
 )
