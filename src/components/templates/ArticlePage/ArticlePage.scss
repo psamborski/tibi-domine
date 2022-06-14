@@ -25,4 +25,11 @@
       justify-content: center;
     }
   }
+
+  .Article-Section__full-width {
+    height: 50vh;
+    min-height: 300px;
+    width: 100%;
+    overflow: hidden;
+  }
 }

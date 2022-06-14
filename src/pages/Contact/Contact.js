@@ -3,6 +3,7 @@ import './Contact.scss'
 
 import BgImage from '../../assets/images/bg.jpg'
 import ArticlePage from '../../components/templates/ArticlePage'
+import Map from '../../components/atoms/Map'
 
 export const Contact = ({ ...restProps }) => (
   <ArticlePage
@@ -44,6 +45,7 @@ export const Contact = ({ ...restProps }) => (
         </p>
       </>
     )}
+    fullWidthSection={<Map id='Contact-Map' />}
     imageSrc={BgImage}
     title='Kontakt'
   />
