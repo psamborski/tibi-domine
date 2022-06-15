@@ -32,10 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    &:before {
-      display: none;
-    }
+    background: none;
   }
 
   img {

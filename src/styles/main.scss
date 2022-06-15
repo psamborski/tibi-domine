@@ -4,8 +4,9 @@ div, span, a, section, article, header, footer, nav {
 
 body {
   margin: 0;
-  font-family: 'Assistant', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: white;
+  letter-spacing: 1px;
 
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
@@ -34,32 +35,21 @@ a {
   text-decoration: none;
   position: relative;
 
-  // on hover behaviour
-  &:before {
-    content: '\A';
-    position: absolute;
-    left: 50%;
-    top: 52%;
-    transform: translateX(-50%);
-    height: 1px;
-    width: 0;
-    background: rgba(255, 255, 255, 0.44);
-    transition: all .1s cubic-bezier(0.86 ,0, 0.07, 1);
+  background-image: linear-gradient(180deg, transparent 20%, rgba(255, 255, 255, 0.46) 21%);
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  background-position: 50% 51%;
 
-  }
   &:hover {
-    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.3);
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.15);
+    background-size: 105% 1px;
   }
-  &:hover::before {
-    width: 105%;
-  }
-  // on hover behaviour end
 
   &:visited {
     opacity: .78;
   }
 
-  &:disabled {
+  &:disabled, &[aria-disabled="true"] {
     opacity: .6;
   }
 }

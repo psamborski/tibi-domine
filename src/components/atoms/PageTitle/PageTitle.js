@@ -16,12 +16,7 @@ export const PageTitle = ({
 
   return (
     <Heading className='Page-Title'>
-      {subtitle && (
-        <>
-          <span className='Page-Title__subtitle'>{subtitle}</span>
-          <br />
-        </>
-    )}
+      {subtitle && <span className='Page-Title__subtitle'>{subtitle}</span>}
       {title}
     </Heading>
 )

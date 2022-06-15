@@ -3,6 +3,8 @@ import {
   BrowserRouter, Route, Routes, Navigate,
 } from 'react-router-dom'
 
+import ScrollToTop from '../ScrollToTop'
+
 const Page404 = () => <div>404</div>
 const LoadingPage = () => <div>Loading</div>
 
@@ -67,6 +69,7 @@ export const RoutesComponent = (props) => {
     <>
       {loaderTimeout && <LoadingPage />}
       <BrowserRouter>
+        <ScrollToTop />
         <Suspense fallback={<LoadingPage />}>
           <Routes>
             {renderRoutes(routes)}

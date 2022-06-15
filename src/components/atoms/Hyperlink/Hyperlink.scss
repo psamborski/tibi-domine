@@ -3,36 +3,24 @@
 .Hyperlink {
   color: white;
   font-weight: 500;
-  transition: all .1s ease-in-out;
-  text-decoration: none;
+  transition: all .1s cubic-bezier(0.86 ,0, 0.07, 1);  text-decoration: none;
   position: relative;
 
-  // on hover behaviour
-  &:before {
-    content: '\A';
-    position: absolute;
-    left: 50%;
-    top: 52%;
-    transform: translateX(-50%);
-    height: 1px;
-    width: 0;
-    background: rgba(255, 255, 255, 0.44);
-    transition: all .1s cubic-bezier(0.86 ,0, 0.07, 1);
+  background-image: linear-gradient(180deg, transparent 20%, rgba(255, 255, 255, 0.49) 21%);
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  background-position: 50% 51%;
 
-  }
   &:hover {
-    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.3);
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.15);
+    background-size: 105% 1px;
   }
-  &:hover::before {
-    width: 105%;
-  }
-  // on hover behaviour end
 
   &:visited {
     opacity: .78;
   }
 
-  &:disabled {
+  &:disabled, &[aria-disabled="true"] {
     opacity: .6;
   }
 }

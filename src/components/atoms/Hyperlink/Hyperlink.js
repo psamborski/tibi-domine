@@ -4,16 +4,16 @@ import './Hyperlink.scss'
 export const Hyperlink = ({
   children, href, title, disabled, ...restProps
 }) => (
-  <a
-    aria-disabled={disabled}
-    className='Hyperlink'
-    href={href}
-    title={title}
-  >
-    <span>
+  <span>
+    <a
+      aria-disabled={disabled}
+      className='Hyperlink'
+      href={href}
+      title={title}
+    >
       {children}
-    </span>
-  </a>
+    </a>
+  </span>
 )
 
 Hyperlink.defaultProps = {

@@ -35,7 +35,7 @@
   opacity: 0;
 
   @media screen and (max-width: $mobile_width_threshold) {
-    position: initial;
+    position: relative;
     flex-direction: column;
     font-size: .9em;
     flex-wrap: nowrap;
@@ -43,8 +43,40 @@
     opacity: 0;
     visibility: hidden;
 
+    &:before {
+      content: '\A';
+      width: 100%;
+      margin: 0 1em;
+      box-sizing: border-box;
+      height: 1px;
+      background: $blue_fade_linear_gradient;
+      position: absolute;
+      top: .7em;
+      left: 0;
+      opacity: .9;
+    }
+
+    &:after {
+      content: '\A';
+      width: 100%;
+      margin: 0 1em;
+      box-sizing: border-box;
+      height: 1px;
+      background: $blue_fade_linear_gradient;
+      position: absolute;
+      bottom: .7em;
+      left: 0;
+      opacity: .9;
+    }
+
+    & > :first-child {
+      margin-top: 1em;
+      //border-top: 1px solid rgba(0, 68, 127, 0.7)
+    }
+
     & > :last-child {
-      margin-bottom: .7em;
+      margin-bottom: 1em;
+      //border-bottom: 1px solid rgba(0, 68, 127, 0.7)
     }
   }
 }

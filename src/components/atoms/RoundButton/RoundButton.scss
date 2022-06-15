@@ -13,6 +13,12 @@
   border-radius: 100%;
   z-index: 2;
   border: 1px solid $main_purple;
+  background: none;
+
+  &[aria-disabled="true"] {
+    cursor: initial;
+    opacity: 1;
+  }
 
   &:after {
     box-sizing: border-box;
