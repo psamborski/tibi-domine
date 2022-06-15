@@ -5,6 +5,7 @@ import { isObject } from '../../../functions/handies'
 
 import MenuItem from '../../atoms/MenuItem'
 import Submenu from '../Submenu'
+import LanguageButton from '../../atoms/LanguageButton'
 
 export const Menu = ({ ...restProps }) => (
   <nav className='Menu'>
@@ -46,6 +47,8 @@ export const Menu = ({ ...restProps }) => (
 
       return null
     })}
+
+    <LanguageButton />
   </nav>
 )
 

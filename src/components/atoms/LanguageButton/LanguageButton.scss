@@ -1,0 +1,32 @@
+@import "../../../styles/variables";
+
+.Language-Button {
+  border: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: $default_transition;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.4em;
+  opacity: .9;
+
+  &:hover {
+    opacity: .78;
+  }
+
+  img {
+    height: 100%;
+  }
+
+  @media screen and (max-width: $mobile_width_threshold) {
+    position: fixed;
+    top: 14px;
+    right: 16px;
+    margin: 0;
+  }
+}
