@@ -4,8 +4,12 @@ import {
 } from 'react-router-dom'
 
 import ScrollToTop from '../ScrollToTop'
+import ErrorBoundary from '../ErrorBoundary'
 
-const Page404 = () => <div>404</div>
+import Error404 from '../../pages/Error404'
+
+/* ---------- */
+
 const LoadingPage = () => <div>Loading</div>
 
 const renderRoutes = (routes) => routes.map((
@@ -26,7 +30,7 @@ const renderRoutes = (routes) => routes.map((
         key={`route-${id}`}
         element={(
           <ParentGuard>
-            {Component && <Component />}
+            {Component && <ErrorBoundary><Component /></ErrorBoundary>}
             {redirect && <Navigate to={redirect} />}
           </ParentGuard>
         )}
@@ -73,12 +77,8 @@ export const RoutesComponent = (props) => {
         <Suspense fallback={<LoadingPage />}>
           <Routes>
             {renderRoutes(routes)}
-            {/* <Route */}
-            {/*  element={<Test />} */}
-            {/*  path='/' */}
-            {/* /> */}
             <Route
-              element={<Page404 />}
+              element={<Error404 />}
               path='*'
             />
           </Routes>
