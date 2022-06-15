@@ -16,7 +16,4 @@ export const LanguageButton = ({ ...restProps }) => (
   </button>
 )
 
-LanguageButton.defaultProps = {
-  to: '#',
-  title: 'Link',
-}
+LanguageButton.defaultProps = {}
