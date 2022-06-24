@@ -2,17 +2,21 @@ import React from 'react'
 import * as ReactDOMClient from 'react-dom/client'
 import reportWebVitals from './functions/reportWebVitals'
 
-import { RoutesComponent } from './features/Routes/Routes'
-import { routesList } from './utils/routes'
 import './styles/main.scss'
+
+import RoutesComponent from './features/Routes'
+import { TranslationProvider } from './features/TranslationContext/TranslationContext'
+import { routesList } from './utils/routes'
 
 const root = ReactDOMClient.createRoot(document.getElementById('root'))
 
 root.render(
   <React.StrictMode>
-    <RoutesComponent
-      routes={routesList}
-    />
+    <TranslationProvider>
+      <RoutesComponent
+        routes={routesList}
+      />
+    </TranslationProvider>
   </React.StrictMode>,
 )
 

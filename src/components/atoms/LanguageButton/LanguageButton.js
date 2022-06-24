@@ -1,19 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './LanguageButton.scss'
 
-import UK from '../../../assets/images/uk.webp'
+import TranslationContext from '../../../features/TranslationContext'
 
-export const LanguageButton = ({ ...restProps }) => (
-  <button
-    className='Language-Button'
-    title='Change language' // todo multilingual title
-    type='button'
-  >
-    <img
-      alt="Britain\'s flag"
-      src={UK}
-    />
-  </button>
-)
+import UK from '../../../assets/images/uk.webp'
+import PL from '../../../assets/images/pl.webp'
+
+export const LanguageButton = ({ ...restProps }) => {
+  const translationContext = useContext(TranslationContext)
+  const {
+   t, toggleLanguage, language,
+  } = translationContext
+
+  return (
+    <button
+      className='Language-Button'
+      onClick={() => toggleLanguage()} // todo multilingual title
+      title={t('CHANGE_LANGUAGE')}
+      type='button'
+    >
+      <img
+        alt={language === 'pl' ? 'Britain\'s flag' : 'Polska flaga'}
+        src={language === 'pl' ? UK : PL}
+      />
+    </button>
+) }
 
 LanguageButton.defaultProps = {}

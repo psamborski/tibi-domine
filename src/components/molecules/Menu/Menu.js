@@ -1,22 +1,28 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Menu.scss'
 import { ROUTES } from '../../../utils/routes'
 import { isObject } from '../../../functions/handies'
+
+import TranslationContext from '../../../features/TranslationContext'
 
 import MenuItem from '../../atoms/MenuItem'
 import Submenu from '../Submenu'
 import LanguageButton from '../../atoms/LanguageButton'
 
-export const Menu = ({ ...restProps }) => (
-  <nav className='Menu'>
-    {Object.entries(ROUTES).map(([key, route]) => {
+export const Menu = ({ ...restProps }) => {
+  const translationContext = useContext(TranslationContext)
+  const { t } = translationContext
+
+  return (
+    <nav className='Menu'>
+      {Object.entries(ROUTES).map(([key, route]) => {
       if (typeof route === 'string') {
         return (
           <MenuItem
-            key={`MENU_${key}`}
+            key={`MENU__${key}`}
             to={route}
           >
-            {`${key}`}
+            {t(`MENU__${key}`)}
           </MenuItem>
         )
       }
@@ -26,13 +32,13 @@ export const Menu = ({ ...restProps }) => (
         const route = ROUTES[key]?.ROOT
 
         return (
-          <React.Fragment key={`MENU_${key}`}>
+          <React.Fragment key={`MENU__${key}`}>
             <MenuItem
               chevron
               to={route}
               toggable
             >
-              {`${key}`}
+              {t(`MENU__${key}`)}
             </MenuItem>
             <Submenu
               rootMenuItem={{
@@ -48,8 +54,8 @@ export const Menu = ({ ...restProps }) => (
       return null
     })}
 
-    <LanguageButton />
-  </nav>
-)
+      <LanguageButton />
+    </nav>
+) }
 
 Menu.defaultProps = {}
