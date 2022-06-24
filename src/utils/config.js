@@ -1,0 +1,4 @@
+export const CONFIG = {
+  CONTENTFUL_SPACE_ID: null,
+  CONTENTFUL_CONSUME_API_KEY: null,
+}
