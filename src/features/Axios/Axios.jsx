@@ -7,8 +7,8 @@ import { CONFIG } from '../../utils/config'
 
 export const AxiosInstance = (
   formData = false,
-  authorization = `Bearer ${CONFIG.CONTENTFUL_CONSUME_API_KEY}`,
-  baseUrl = `https://graphql.contentful.com/content/v1/spaces/${CONFIG.CONTENTFUL_SPACE_ID}/`,
+  authorization = `Bearer ${CONFIG.CONTENTFUL_CONSUME_API_KEY || process.env.REACT_APP_CONTENTFUL_CONSUME_API_KEY}`,
+  baseUrl = `https://graphql.contentful.com/content/v1/spaces/${CONFIG.CONTENTFUL_SPACE_ID}/`
 ) => {
   const testMode = process.env.NODE_ENV !== 'production'
   // const axiosInstance = applyCaseMiddleware(
