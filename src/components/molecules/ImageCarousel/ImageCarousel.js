@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import './ImageCarousel.scss'
 
-import Carousel from 'nuka-carousel'
+import { Carousel } from 'nuka-carousel'
 
 export const ImageCarousel = ({
   images, openedImageIndex, setOpenedImageIndex, ...restProps
