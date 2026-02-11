@@ -19,17 +19,17 @@ export const ContactItems = ({ contactItems }) => (
         )
       }
     </IconTile>
-    <IconTile
-      disabled
-      iconClassname='fa-solid fa-phone'
-    >
-      {
-        documentToReactComponents(
-          contactItems?.phone?.json || {},
-          renderOptions(contactItems?.phone?.links || {}),
-        )
-      }
-    </IconTile>
+    {/* <IconTile */}
+    {/*  disabled */}
+    {/*  iconClassname='fa-solid fa-phone' */}
+    {/* > */}
+    {/*  { */}
+    {/*    documentToReactComponents( */}
+    {/*      contactItems?.phone?.json || {}, */}
+    {/*      renderOptions(contactItems?.phone?.links || {}), */}
+    {/*    ) */}
+    {/*  } */}
+    {/* </IconTile> */}
     <IconTile
       disabled
       iconClassname='fa-solid fa-calendar-day'

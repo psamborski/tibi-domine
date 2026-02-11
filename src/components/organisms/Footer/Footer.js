@@ -34,20 +34,23 @@ export const Footer = () => {
     <footer className='Footer'>
       <section className='Footer-contact-section'>
         <div className='Footer-contact-section__container'>
-          <IconHyperlink
-            href={`tel:${footerData?.[language]?.mainPhoneNumber || '-'}`}
-            iconClassname='fa-solid fa-phone'
-            title={footerData?.[language]?.mainPhoneNumber || 'Phone number'}
-          >
-            {footerData?.[language]?.mainPhoneNumber || 'Phone number'}
-          </IconHyperlink>
-          <IconHyperlink
-            href={`mailto:${footerData?.[language]?.mainEMailAddress || '-'}`}
-            iconClassname='fa-solid fa-envelope'
-            title={footerData?.[language]?.mainEMailAddress || 'E-mail address'}
-          >
-            {footerData?.[language]?.mainEMailAddress || 'E-mail address'}
-          </IconHyperlink>
+          {/* <IconHyperlink */}
+          {/*  href={`tel:${footerData?.[language]?.mainPhoneNumber || '-'}`} */}
+          {/*  iconClassname='fa-solid fa-phone' */}
+          {/*  title={footerData?.[language]?.mainPhoneNumber || 'Phone number'} */}
+          {/* > */}
+          {/*  {footerData?.[language]?.mainPhoneNumber || 'Phone number'} */}
+          {/* </IconHyperlink> */}
+          {footerData?.[language]?.mainEmailAddress && (
+            <IconHyperlink
+              href={`mailto:${footerData?.[language]?.mainEmailAddress}`}
+              iconClassname='fa-solid fa-envelope'
+              title={footerData?.[language]?.mainEmailAddress}
+            >
+              {footerData?.[language]?.mainEmailAddress}
+            </IconHyperlink>
+)
+          }
         </div>
       </section>
       <section className='Footer-logo-section'>
@@ -56,12 +59,14 @@ export const Footer = () => {
       <section className='Footer-social-section'>
         <RoundButton
           href={footerData?.[language]?.youtubeLink || '#'}
+          size='large'
           title={footerData?.[language]?.youtubeTitle || 'Youtube'}
         >
           <span className='fa-brands fa-youtube' />
         </RoundButton>
         <RoundButton
           href={footerData?.[language]?.facebookLink || '#'}
+          size='large'
           title={footerData?.[language]?.facebookTitle || 'Facebook'}
         >
           <span className='fa-brands fa-facebook-f' />
